@@ -2,6 +2,12 @@
 
 A distributable Vale package that flags millennial-style slang, meme phrasing, pet-speech, and emotional hyperbole.
 
+Not too serious, this package is meant to be a fun way to catch and optionally ban overused millennial slang and hyperbole in your writing. It can be used as a tone filter for more professional or neutral copy, or just for fun to keep your writing old-school.
+
+Idea-ed from [a Facebook post by Merriam-Webster Dictionary](https://www.facebook.com/merriamwebster/posts/pfbid0BBGcuDETPmBWZxf7CuNBAtMyHNFeizyv8p8aW8xqWxkSC6YbEdrHzrsv4LCjao4Gl).
+
+![Millennialisms by Merriam-Webster Dictionary](.github/fb-mw.jpg)
+
 It is packaged as a **complete Vale package**:
 * `.vale.ini`
 * `styles/`
