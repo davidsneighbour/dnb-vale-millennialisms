@@ -11,16 +11,23 @@ Build the distributable Vale package zip for releases.
 Creates:
   dist/Millennialisms.zip
 
-Included files:
-  .vale.ini
-  styles/
-  README.md
-  LICENSE (if present)
+Archive layout:
+  Millennialisms/
+    .vale.ini
+    styles/
+    README.md
+    LICENSE (if present)
 
 Notes:
-  * This script is intended for release packaging.
+  * This script builds a complete Vale package.
   * It fails if required package files are missing.
 EOF
+}
+
+cleanup() {
+  if [[ -n "${TEMP_DIR:-}" && -d "${TEMP_DIR}" ]]; then
+    rm -rf "${TEMP_DIR}"
+  fi
 }
 
 main() {
@@ -30,7 +37,12 @@ main() {
   fi
 
   local project_root
+  local package_root
+  local output_file
+
   project_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+  package_root="Millennialisms"
+  output_file="dist/Millennialisms.zip"
 
   cd "${project_root}"
 
@@ -50,20 +62,33 @@ main() {
   fi
 
   mkdir -p dist
-  rm -f dist/Millennialisms.zip
+
+  TEMP_DIR="$(mktemp -d)"
+  trap cleanup EXIT
+
+  mkdir -p "${TEMP_DIR}/${package_root}"
+
+  cp ".vale.ini" "${TEMP_DIR}/${package_root}/.vale.ini"
+  cp "README.md" "${TEMP_DIR}/${package_root}/README.md"
+  cp -R "styles" "${TEMP_DIR}/${package_root}/styles"
 
   if [[ -f "LICENSE" ]]; then
-    zip -rq dist/Millennialisms.zip .vale.ini styles README.md LICENSE
-  else
-    zip -rq dist/Millennialisms.zip .vale.ini styles README.md
+    cp "LICENSE" "${TEMP_DIR}/${package_root}/LICENSE"
   fi
 
-  if [[ ! -f "dist/Millennialisms.zip" ]]; then
-    echo "[error] Failed to create dist/Millennialisms.zip" >&2
+  rm -f "${output_file}"
+
+  (
+    cd "${TEMP_DIR}"
+    zip -rq "${project_root}/${output_file}" "${package_root}"
+  )
+
+  if [[ ! -f "${output_file}" ]]; then
+    echo "[error] Failed to create ${output_file}" >&2
     exit 1
   fi
 
-  echo "[info] Built dist/Millennialisms.zip"
+  echo "[info] Built ${output_file}"
 }
 
 main "$@"
