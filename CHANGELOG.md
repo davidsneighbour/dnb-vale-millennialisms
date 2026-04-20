@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.4](https://github.com/davidsneighbour/dnb-vale-millennialisms/compare/v0.1.3...v0.1.4) (2026-04-20)
+
+### Bug Fixes
+
+* create subdirectory inside release package ([19737a6](https://github.com/davidsneighbour/dnb-vale-millennialisms/commit/19737a6b493a337224c387d9b1b32f952152a771))
+
 ## [0.1.3](https://github.com/davidsneighbour/dnb-vale-millennialisms/compare/v0.1.2...v0.1.3) (2026-04-20)
 
 ### Bug Fixes
