@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.3](https://github.com/davidsneighbour/dnb-vale-millennialisms/compare/v0.1.2...v0.1.3) (2026-04-20)
+
+### Bug Fixes
+
+* remove GitHub release workflow ([f3b5869](https://github.com/davidsneighbour/dnb-vale-millennialisms/commit/f3b58693985a245bcd5f574bf637bb8305ed1be4))
+
 ## [0.1.2](https://github.com/davidsneighbour/dnb-vale-millennialisms/compare/v0.1.1...v0.1.2) (2026-04-20)
 
 ### Bug Fixes

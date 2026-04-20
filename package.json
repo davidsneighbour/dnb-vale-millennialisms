@@ -1,6 +1,6 @@
 {
   "name": "@davidsneighbour/dnb-vale-millennialisms",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Protect your hard typed verbiage against millennialisms!",
   "scripts": {
     "release": "release-it"
