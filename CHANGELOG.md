@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.2](https://github.com/davidsneighbour/dnb-vale-millennialisms/compare/v0.1.1...v0.1.2) (2026-04-20)
+
+### Bug Fixes
+
+* replace a couple of stray namings ([6a4ef29](https://github.com/davidsneighbour/dnb-vale-millennialisms/commit/6a4ef29edf1163c2990a512f4cf3408f7493c30e))
+
 ## [0.1.1](https://github.com/davidsneighbour/dnb-vale-millenialisms/compare/v0.1.0...v0.1.1) (2026-04-20)
 
 ### Documentation
