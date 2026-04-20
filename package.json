@@ -1,0 +1,28 @@
+{
+  "name": "@davidsneighbour/dnb-vale-millennialisms",
+  "version": "0.0.0",
+  "description": "Protect your hard typed verbiage against millennialisms!",
+  "scripts": {
+    "release": "release-it"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/dnb-vale-millennialisms.git"
+  },
+  "keywords": [
+    "vale",
+    "linter",
+    "vale-style"
+  ],
+  "author": "Patrick Kollitsch <davidsneighbourdev+gh@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/dnb-vale-millennialisms/issues"
+  },
+  "homepage": "https://github.com/davidsneighbour/dnb-vale-millennialisms#readme",
+  "devDependencies": {
+    "@release-it/conventional-changelog": "10.0.6",
+    "release-it": "20.0.0"
+  }
+}
